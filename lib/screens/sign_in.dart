@@ -16,36 +16,42 @@ class _SignInState extends State<SignIn> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-          title: const CustomText(
-            text: 'LOG IN',
-            color: Colors.black,
-            weight: FontWeight.bold,
-          ),
-          backgroundColor: Colors.white),
+        title: const CustomText(
+          text: 'LOG IN',
+          color: Colors.black,
+          weight: FontWeight.bold,
+        ),
+        backgroundColor: Colors.white,
+        centerTitle: true,
+      ),
       // ignore: sized_box_for_whitespace
       body: Container(
         width: double.infinity,
         height: size.height,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: const <Widget>[
-            CustomText(
-              text: 'Learnig App',
-              color: Colors.redAccent,
-              size: 20.0,
-              weight: FontWeight.bold
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            CustomText(
-              text: 'Enter your Log in details to access your account',
-              color: Colors.redAccent,
-              size: 15.0,
-              weight: FontWeight.bold,
-            )
-          ]
-        ),
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: const <Widget>[
+              SizedBox(
+                height: 30.0,
+              ),
+              CustomText(
+                  text: 'Learnig App',
+                  color: Colors.redAccent,
+                  size: 30.0,
+                  weight: FontWeight.bold),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: CustomText(
+                  text: 'Enter your Log in details to access your account',
+                  color: Colors.redAccent,
+                  size: 20.0,
+                  weight: FontWeight.bold,
+                ),
+              )
+            ]),
       ),
     );
   }
