@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
-  SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({Key? key}) : super(key: key);
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -15,17 +15,18 @@ class _SplashScreenState extends State<SplashScreen> {
         fit: StackFit.expand,
         children: [
           Container(
-            decoration: BoxDecoration(color: Colors.redAccent),
+            decoration: const BoxDecoration(color: Colors.redAccent),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Expanded(
                 flex: 2,
+                // ignore: avoid_unnecessary_containers
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       CircleAvatar(
                         backgroundColor: Colors.white,
                         radius: 50.0,
@@ -54,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 flex: 1,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     CircularProgressIndicator(),
                     Padding(
                       padding: EdgeInsets.only(top: 20.0),
