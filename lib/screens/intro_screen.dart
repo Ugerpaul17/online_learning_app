@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:online_learning_app/components/rounded_button.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -45,8 +45,12 @@ class IntroScreen extends StatelessWidget {
                 ),
                 textAlign: TextAlign.center),
             const SizedBox(
-              height: 20,
+              height: 60,
             ),
+            RoundedButton(
+              title: 'Start Learning',
+              onTap: () {},
+            )
           ],
         ),
       ),
